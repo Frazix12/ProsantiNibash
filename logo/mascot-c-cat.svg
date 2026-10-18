@@ -1,0 +1,79 @@
+<!--
+  Mascot C v2: "Landlord Cat" — refined
+  Ears repositioned to sit naturally on head circle boundary.
+  Head slightly higher. Key pendant made cleaner and larger.
+  Inner ear pinks added. Face expressions tightened.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"
+     role="img" aria-labelledby="title-cat">
+  <title id="title-cat">Prosanti Nibash — Landlord Cat</title>
+
+  <!-- Left ear: triangle anchored at head edge, pointing up-left -->
+  <polygon points="60,110 44,48 112,88" fill="#F4A261"/>
+  <!-- Right ear -->
+  <polygon points="196,110 212,48 144,88" fill="#F4A261"/>
+
+  <!-- Left inner ear -->
+  <polygon points="68,102 58,62 104,88" fill="#FDDCB5"/>
+  <!-- Right inner ear -->
+  <polygon points="188,102 198,62 152,88" fill="#FDDCB5"/>
+
+  <!-- Head: big round circle -->
+  <circle cx="128" cy="130" r="96" fill="#F4A261"/>
+
+  <!-- Forehead tabby stripes -->
+  <path fill="none" stroke="#E07A3A" stroke-width="5" stroke-linecap="round"
+    d="M105 68 Q128 61 151 68"/>
+  <path fill="none" stroke="#E07A3A" stroke-width="4" stroke-linecap="round"
+    d="M100 80 Q128 72 156 80"/>
+
+  <!-- Left eye white -->
+  <ellipse cx="96" cy="120" rx="24" ry="26" fill="#ffffff"/>
+  <!-- Left iris -->
+  <ellipse cx="100" cy="122" rx="14" ry="17" fill="#2C3E6B"/>
+  <!-- Left shine -->
+  <circle cx="107" cy="115" r="6" fill="#ffffff"/>
+  <circle cx="97" cy="128" r="3" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Right eye white -->
+  <ellipse cx="160" cy="120" rx="24" ry="26" fill="#ffffff"/>
+  <!-- Right iris -->
+  <ellipse cx="164" cy="122" rx="14" ry="17" fill="#2C3E6B"/>
+  <!-- Right shine -->
+  <circle cx="171" cy="115" r="6" fill="#ffffff"/>
+  <circle cx="161" cy="128" r="3" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Nose: small heart-ish triangle -->
+  <path fill="#E07A3A" d="M128 148 L119 158 Q128 165 137 158 Z"/>
+
+  <!-- Smile lines -->
+  <path fill="none" stroke="#2C3E6B" stroke-width="4" stroke-linecap="round"
+    d="M119 158 Q110 170 100 168"/>
+  <path fill="none" stroke="#2C3E6B" stroke-width="4" stroke-linecap="round"
+    d="M137 158 Q146 170 156 168"/>
+
+  <!-- Whiskers left -->
+  <line x1="114" y1="154" x2="46" y2="144" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="114" y1="160" x2="46" y2="160" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="114" y1="166" x2="46" y2="176" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Whiskers right -->
+  <line x1="142" y1="154" x2="210" y2="144" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="142" y1="160" x2="210" y2="160" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="142" y1="166" x2="210" y2="176" stroke="#2C3E6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Rosy cheeks -->
+  <ellipse cx="68" cy="162" rx="22" ry="13" fill="#E07A3A" opacity="0.38"/>
+  <ellipse cx="188" cy="162" rx="22" ry="13" fill="#E07A3A" opacity="0.38"/>
+
+  <!-- Key pendant chain dot -->
+  <circle cx="128" cy="220" r="4" fill="#2C3E6B"/>
+
+  <!-- Key bow (ring) -->
+  <circle cx="128" cy="206" r="14" fill="none" stroke="#2C3E6B" stroke-width="7"/>
+  <!-- Key shaft -->
+  <rect x="124" y="218" width="8" height="22" rx="3" fill="#2C3E6B"/>
+  <!-- Key bits -->
+  <rect x="132" y="228" width="10" height="6" rx="2" fill="#2C3E6B"/>
+  <rect x="132" y="237" width="7" height="5" rx="2" fill="#2C3E6B"/>
+</svg>

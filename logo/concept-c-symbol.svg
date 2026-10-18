@@ -1,0 +1,38 @@
+<!--
+  Concept C v2: "Key" — fixed geometry
+  A classic key shape: circular bow (open ring/donut) + horizontal shaft + two rectangular bits.
+  Clean, relevant to building ownership (landlord = key holder).
+  
+  Construction on 256x256:
+  - Bow outer circle: center=(96, 88), r=64  → spans x=32..160, y=24..152
+  - Bow inner hole: center=(96, 88), r=36    → donut wall = 28px thick
+  - Shaft: rect from x=96 to x=232, y=72 to y=104  (height=32, sitting at mid-bow)
+  - Bit 1 (tooth down): rect x=164..192, y=104..136
+  - Bit 2 (tooth down): rect x=208..232, y=104..128
+
+  The shaft overlaps the bow at x=96..160 — that's fine (same fill color merges visually).
+  Inner hole is only inside the bow circle, so shaft area isn't cut.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"
+     role="img" aria-labelledby="title-c">
+  <title id="title-c">Prosanti Nibash — Key</title>
+
+  <!-- Bow: donut ring -->
+  <path fill="#2C3E6B" fill-rule="evenodd"
+    d="
+      M 96 24
+      A 64 64 0 1 1 95.9 24
+      Z
+      M 96 52
+      A 36 36 0 1 0 96.1 52
+      Z
+    "/>
+
+  <!-- Shaft -->
+  <rect x="96" y="72" width="136" height="32" fill="#2C3E6B"/>
+
+  <!-- Teeth/bits pointing downward -->
+  <rect x="156" y="104" width="28" height="28" fill="#2C3E6B"/>
+  <rect x="200" y="104" width="28" height="20" fill="#2C3E6B"/>
+
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ground Foundation Plinth (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,76 h48 c1,0 1.5,0.5 1.5,1.5 v0.5 c0,1 -0.5,1.5 -1.5,1.5 h-48 c-1,0 -1.5,-0.5 -1.5,-1.5 v-0.5 c0,-1 0.5,-1.5 1.5,-1.5 z" />
+
+    <!-- Protective Architectural Archway (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,76 V50 C33,38.4 42.4,29 54,29 C65.6,29 75,38.4 75,50 V76 H67 V50 C67,42.8 61.2,37 54,37 C46.8,37 41,42.8 41,50 V76 Z" />
+
+    <!-- Bilateral Flat Ledger Accents (Warm Gold #E8C17B) -->
+    <path
+        android:fillColor="#E8C17B"
+        android:pathData="M44,49 h6 c0.5,0 1,0.5 1,1 v0.5 c0,0.5 -0.5,1 -1,1 h-6 c-0.5,0 -1,-0.5 -1,-1 V50 c0,-0.5 0.5,-1 1,-1 z" />
+    <path
+        android:fillColor="#E8C17B"
+        android:pathData="M58,49 h6 c0.5,0 1,0.5 1,1 v0.5 c0,0.5 -0.5,1 -1,1 h-6 c-0.5,0 -1,-0.5 -1,-1 V50 c0,-0.5 0.5,-1 1,-1 z" />
+    <path
+        android:fillColor="#E8C17B"
+        android:pathData="M44,56 h6 c0.5,0 1,0.5 1,1 v0.5 c0,0.5 -0.5,1 -1,1 h-6 c-0.5,0 -1,-0.5 -1,-1 V57 c0,-0.5 0.5,-1 1,-1 z" />
+    <path
+        android:fillColor="#E8C17B"
+        android:pathData="M58,56 h6 c0.5,0 1,0.5 1,1 v0.5 c0,0.5 -0.5,1 -1,1 h-6 c-0.5,0 -1,-0.5 -1,-1 V57 c0,-0.5 0.5,-1 1,-1 z" />
+
+    <!-- Central Serenity Curve / Harmonious Leaf Peak (Warm Gold #E8C17B) -->
+    <path
+        android:fillColor="#E8C17B"
+        android:pathData="M54,76 C54,60 48.5,52 54,39 C59.5,52 54,60 54,76 Z" />
+</vector>

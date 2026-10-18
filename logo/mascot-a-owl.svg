@@ -1,0 +1,65 @@
+<!--
+  Mascot A v2: "Nibash Owl" — refined
+  Rounder, cuter. Hat sits flush on head. Feet replaced with small wing stubs.
+  Eyes larger and more expressive. Beak smaller and cuter.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"
+     role="img" aria-labelledby="title-owl">
+  <title id="title-owl">Prosanti Nibash — Nibash Owl</title>
+
+  <!-- Body: big round circle, slightly lower so hat fits on top -->
+  <circle cx="128" cy="158" r="88" fill="#F4A261"/>
+
+  <!-- Belly: lighter teardrop patch -->
+  <ellipse cx="128" cy="175" rx="44" ry="50" fill="#FDDCB5"/>
+
+  <!-- Left ear tuft (small triangle above head, left) -->
+  <polygon points="84,88 72,56 102,82" fill="#E07A3A"/>
+  <!-- Right ear tuft -->
+  <polygon points="172,88 184,56 154,82" fill="#E07A3A"/>
+
+  <!-- House hat: sits on top of head -->
+  <!-- Hat brim/base rect -->
+  <rect x="88" y="72" width="80" height="24" rx="5" fill="#2C3E6B"/>
+  <!-- Hat roof triangle -->
+  <polygon points="128,34 86,72 170,72" fill="#2C3E6B"/>
+  <!-- Tiny white window on hat -->
+  <rect x="116" y="46" width="24" height="18" rx="4" fill="#ffffff" opacity="0.9"/>
+  <!-- Mini door arch in hat brim -->
+  <path fill="#F4A261"
+    d="M118 96 L118 84 A10 10 0 0 1 138 84 L138 96 Z"/>
+
+  <!-- Left eye white sclera -->
+  <circle cx="100" cy="148" r="30" fill="#ffffff"/>
+  <!-- Right eye white sclera -->
+  <circle cx="156" cy="148" r="30" fill="#ffffff"/>
+
+  <!-- Left iris -->
+  <circle cx="104" cy="150" r="18" fill="#2C3E6B"/>
+  <!-- Right iris -->
+  <circle cx="160" cy="150" r="18" fill="#2C3E6B"/>
+
+  <!-- Eye shine left -->
+  <circle cx="110" cy="144" r="6" fill="#ffffff"/>
+  <!-- Eye shine right -->
+  <circle cx="166" cy="144" r="6" fill="#ffffff"/>
+
+  <!-- Small shine dot left -->
+  <circle cx="100" cy="155" r="3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="156" cy="155" r="3" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Beak: tiny rounded diamond -->
+  <path fill="#E07A3A" d="M128 168 L120 178 Q128 184 136 178 Z"/>
+
+  <!-- Rosy cheeks -->
+  <ellipse cx="72" cy="168" rx="18" ry="11" fill="#E07A3A" opacity="0.35"/>
+  <ellipse cx="184" cy="168" rx="18" ry="11" fill="#E07A3A" opacity="0.35"/>
+
+  <!-- Wing stubs -->
+  <ellipse cx="44" cy="185" rx="24" ry="14" fill="#E07A3A" transform="rotate(-20 44 185)"/>
+  <ellipse cx="212" cy="185" rx="24" ry="14" fill="#E07A3A" transform="rotate(20 212 185)"/>
+
+  <!-- Feet: two small rounded bumps at bottom -->
+  <ellipse cx="104" cy="242" rx="22" ry="10" fill="#E07A3A"/>
+  <ellipse cx="152" cy="242" rx="22" ry="10" fill="#E07A3A"/>
+</svg>
