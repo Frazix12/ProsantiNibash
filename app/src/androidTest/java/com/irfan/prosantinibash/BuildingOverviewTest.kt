@@ -13,6 +13,9 @@ import com.irfan.prosantinibash.core.design.ProsantiTheme
 import com.irfan.prosantinibash.core.settings.AppPreferences
 import com.irfan.prosantinibash.data.model.*
 import com.irfan.prosantinibash.feature.book.*
+import com.irfan.prosantinibash.feature.home.HomeScreen
+import com.irfan.prosantinibash.feature.flats.BookFlatsScreen
+import com.irfan.prosantinibash.feature.flats.FlatDetailsScreen
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test

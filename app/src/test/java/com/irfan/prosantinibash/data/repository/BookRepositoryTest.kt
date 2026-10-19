@@ -75,6 +75,37 @@ class BookRepositoryTest {
         } finally { client.close() }
     }
 
+    @Test fun fullAndIncrementalSnapshotsRejectInvalidBuildingStructure() = runTest {
+        val invalid = snapshot().replace("\"flat_number\":\"7B\"", "\"flat_number\":\"8B\"")
+        assertSnapshotRejected(invalid, IllegalArgumentException::class.java)
+    }
+
+    @Test fun fullAndIncrementalSnapshotsRejectOverflowingFinancialTotals() = runTest {
+        val invalid = Json.parseToJsonElement(snapshot()).jsonObject.toMutableMap()
+        invalid["rent_periods"] = Json.parseToJsonElement("""[
+            {"id":"r1","tenancy_id":"tenancy","period_date":"2026-01-01","amount_paisa":9223372036854775807},
+            {"id":"r2","tenancy_id":"tenancy","period_date":"2026-02-01","amount_paisa":1}
+        ]""")
+        assertSnapshotRejected(JsonObject(invalid).toString(), ArithmeticException::class.java)
+    }
+
+    private suspend fun assertSnapshotRejected(snapshot: String, expected: Class<out Exception>) {
+        for (incremental in listOf(false, true)) {
+            val engine = MockEngine { request ->
+                val endpoint = if (incremental) "pn_sync" else "pn_snapshot"
+                assertEquals("/rest/v1/rpc/$endpoint", request.url.encodedPath)
+                val response = if (incremental) """{"version":1,"full":true,"book":$snapshot}""" else snapshot
+                respond(response, headers = headersOf(HttpHeaders.ContentType, "application/json"))
+            }
+            val client = client(engine)
+            try {
+                val repository = BookRepository(client)
+                val failure = runCatching { if (incremental) repository.sync() else repository.load() }.exceptionOrNull()
+                assertTrue("Expected ${expected.simpleName}, got $failure (incremental=$incremental)", expected.isInstance(failure))
+            } finally { client.close() }
+        }
+    }
+
     private fun client(engine: MockEngine) = createSupabaseClient("https://book-test.invalid", "sb_publishable_fake") {
         install(Postgrest)
         httpEngine = engine

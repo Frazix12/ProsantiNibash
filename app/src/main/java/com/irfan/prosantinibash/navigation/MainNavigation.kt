@@ -24,6 +24,9 @@ import com.irfan.prosantinibash.core.settings.AppPreferences
 import com.irfan.prosantinibash.core.ui.*
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import com.irfan.prosantinibash.feature.book.*
+import com.irfan.prosantinibash.feature.home.HomeScreen
+import com.irfan.prosantinibash.feature.flats.BookFlatsScreen
+import com.irfan.prosantinibash.feature.flats.FlatDetailsScreen
 import com.irfan.prosantinibash.feature.building.*
 import com.irfan.prosantinibash.feature.deposits.*
 import com.irfan.prosantinibash.feature.documents.*

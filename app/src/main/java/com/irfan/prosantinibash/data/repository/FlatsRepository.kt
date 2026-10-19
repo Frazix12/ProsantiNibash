@@ -6,7 +6,7 @@ import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.query.Columns
 
-/** Reads permanent units only; financial and tenant data arrive in the rent milestone. */
+/** Reads and validates permanent units independently of the full financial snapshot. */
 class FlatsRepository(private val client: SupabaseClient) {
     suspend fun loadFlats(): List<Flat> {
         val result = client.from("flats").select(
