@@ -1,6 +1,7 @@
 *.iml
 .idea/
 .gradle
+.kotlin/
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -23,3 +24,17 @@ local.properties
 /docs/performance-improvements-*.md
 /docs/superpowers/
 /docs/plans/
+
+# Local credentials, private keys, and database snapshots
+.env*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-*
+*.sqlite
+*.sqlite3

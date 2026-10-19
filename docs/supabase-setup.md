@@ -84,3 +84,24 @@ Every mutation needs `{action, request_id, data}`. Keep the same UUID and payloa
 All monetary values are integer paisa. Deposit adjustments are signed; ordinary charges/payments/expenses are nonnegative or positive as constrained by their table. Move-out uses `id`, `revision`, `move_out_date`, optional nonnegative `damage_paisa`, and optional signed `adjustment_paisa`; it applies credit and available deposit, refunds remaining balances, closes the tenancy, and retains any unpaid debt. Generated monthly charges after a backdated departure are cancelled with audit history; manual historical charges remain.
 
 Local verification on 2026-10-02 passed both ordinary and Supabase-style default-grant databases, plus simultaneous duplicate payment submissions and simultaneous stale corrections using independent PostgreSQL sessions. Live application is handled separately after local verification.
+
+## Permanent deletion migration
+
+After the foundation, rent-book, and `202610040001_performance.sql` migrations,
+apply `supabase/migrations/202610190001_permanent_delete.sql` **once** in the
+Supabase SQL editor (complete file), or with `psql -v ON_ERROR_STOP=1 -f`.
+It preserves existing rows and adds preview/deletion RPCs and operational markers.
+These RPCs use the existing accepted anonymous access boundary: a publishable-key
+client can permanently delete records. Keep the web server on loopback.
+
+Permanent deletion removes affected audit and old retry payloads. Tenant deletion
+also removes related finances and document metadata; the web app then removes
+unlinked storage objects with retryable cleanup. Minimal request identifiers and
+cleanup receipts prevent replay; skipped-month markers stop deleted rent charges
+from regenerating. This does not erase backups or offline device caches.
+
+For disposable verification, apply all migrations in filename order, then run
+`supabase/tests/permanent_delete.sql` alongside the existing SQL suites. Tests
+roll back fixtures and cover cascade deletion, stale previews, required
+confirmation, erased retry rejection, reallocation, and Android sync tombstones.
+The migration has not been applied to the shared backend by this code change.

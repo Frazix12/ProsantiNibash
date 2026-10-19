@@ -48,6 +48,14 @@ Requires Android Studio or a compatible Android SDK, JDK 17, and Android SDK pla
    ./gradlew assembleDebug
    ```
 
+## Local web workspace
+
+An English-only Next.js app in [`web/`](web/README.md) manages the same Supabase book. Start it manually when needed and stop it afterward. See the [web setup and usage guide](web/README.md).
+
+## Maintenance
+
+See [the codebase guide](docs/architecture.md) for package responsibilities, data flow, and verification commands. Backend setup and access boundaries are documented in [Supabase setup](docs/supabase-setup.md).
+
 ## License
 
 Licensed under the [Apache License 2.0](LICENSE).
